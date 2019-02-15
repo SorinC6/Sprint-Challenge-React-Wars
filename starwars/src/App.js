@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import StarWarsList from './components/StarWarsList';
 
 class App extends Component {
   constructor() {
@@ -32,7 +33,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1 className="Header">React Wars</h1>
+        <h2 className="Header">React Wars</h2>
+         <StarWarsList
+            dataList={this.state.starwarsChars}
+         />
       </div>
     );
   }
