@@ -10,6 +10,7 @@ const StarWarsList = (props) => {
                <StarWars
                   key={character.created}
                   dataList={character}
+                  getFilms={props.getFilms}
                />
             ))
          }

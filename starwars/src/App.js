@@ -12,6 +12,7 @@ class App extends Component {
       starwarsChars: [],
       nextPage: null,
       prevPage:null,
+      filmList:[],
     };
   }
 
@@ -28,7 +29,7 @@ class App extends Component {
         return res.json();
       })
       .then(data => {
-         console.log(data);
+      console.log(data);
         this.setState({ 
             starwarsChars: data.results, 
             nextPage:data.next,
@@ -57,7 +58,9 @@ class App extends Component {
         <h2 className="Header">React  Wars</h2>
          <StarWarsList
             dataList={this.state.starwarsChars}
+            // getFilms={this.getFilms}
          />
+
          <LoadPageButtons
             prevPage={this.prevPage}
             nextPage={this.nextPage}

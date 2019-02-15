@@ -10,6 +10,8 @@ const StarWars = (props) => {
          <h4 className='item-style' >Skin Color: {props.dataList.skin_color}</h4>
          <h4 className='item-style' >Hair Color: {props.dataList.hair_color}</h4>
          <h4 className='item-style' >Height: {props.dataList.height}</h4>
+         {/* <div className='movie-list'>   
+         </div> */}
       </div>
    )
 } 
