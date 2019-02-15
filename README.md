@@ -26,12 +26,20 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+   ReactJs its a versatile JavaScript framework , it can be added easy to other libraries like web pack and its own redux ,react native I think .... Its resolving the problem with the Dom  operation.When loaded React called a virtual Dom.
+   When you use React different parts of the App are separated into components. One component should contain the necessary code to make it functional.  Makes the code very modular and reusable . The same  component can be used across the entire App on diffrerent places.
+
 - [ ] What does it mean to _think_ in react?
+
+   its how its make you think about building a app. Making components that cand be reusable in the entire App.Our compoents tree allows us to create complex UI that don't confuse the state. our components are made of two main ingredients: state and props
 
 - [ ] Describe state.
 
-- [ ] Describe props.
+   When using Class Compoents only  , state describes the part of the app that can hold some data and handle changes, state can be passed to props. State let you create compoents that are dynamic and can update the App when they are changed
 
+- [ ] Describe props.
+   When bulding compoents, props are data that can be passed into components and between them. The data cand be passed from parent to a child and is immutable
+   
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
