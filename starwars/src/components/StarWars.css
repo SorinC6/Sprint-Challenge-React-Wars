@@ -45,3 +45,8 @@
    transition: 0.25s ease-in-out;
    color:rgb(70, 62, 21)
 }
+
+.Header{
+   font-size: 40px;
+   font-family: 'Monoton', cursive;
+}
