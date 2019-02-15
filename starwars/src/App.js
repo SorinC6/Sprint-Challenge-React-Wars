@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
 import './App.css';
+import StarWarsList from './components/StarWarsList';
+import LoadPageButtons from './components/LoadPageButtons';
+import './components/StarWars.css'
+
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      starwarsChars: []
+      starwarsChars: [],
+      nextPage: null,
+      prevPage:null,
+      filmList:[],
     };
   }
 
@@ -22,17 +29,42 @@ class App extends Component {
         return res.json();
       })
       .then(data => {
-        this.setState({ starwarsChars: data.results });
+      console.log(data);
+        this.setState({ 
+            starwarsChars: data.results, 
+            nextPage:data.next,
+            prevPage:data.previous,
+         });
       })
       .catch(err => {
         throw new Error(err);
       });
   };
 
+  prevPage = () => {
+     //console.log('prev');
+     if(this.state.prevPage)
+      this.getCharacters(this.state.prevPage)
+  }
+
+  nextPage = () => {
+     console.log('next');
+     this.getCharacters(this.state.nextPage);
+  }
+
   render() {
     return (
       <div className="App">
-        <h1 className="Header">React Wars</h1>
+        <h2 className="Header">React  Wars</h2>
+         <StarWarsList
+            dataList={this.state.starwarsChars}
+            // getFilms={this.getFilms}
+         />
+
+         <LoadPageButtons
+            prevPage={this.prevPage}
+            nextPage={this.nextPage}
+         />
       </div>
     );
   }
